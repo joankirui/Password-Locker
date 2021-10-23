@@ -59,3 +59,28 @@ def copy_password(account):
     We import the framework then declare a function that copies the emails.
     '''
     return Credentials.copy_password(account)
+def main():
+    print("Hello welcome to your credentials store...\n Use these short codes:\n ca --create new account\n ha --have an existing account") 
+    short_code = input("").lower().strip()
+
+    if short_code == 'ca':
+        print("Sign up")
+        print("-"*20)
+
+        username = input("Username: ")
+        while True:
+            print("ip - to input your own password:\n gp - to generate random password")
+            password_choice = input().lower().strip()
+            if password_choice == 'ip':
+                password = input("Enter Password\n")
+                break
+            elif password_choice == 'gp':
+                password = generate_Password()
+                break
+            else:
+                print("Invalid password choice")
+        save_user(create_user(username,password)) # create and save new user.
+        print("-"*20)
+        print(f"Hello {username} Your account has been created successfully! Your password is {password}")
+        print("-"*20)
+    
