@@ -92,6 +92,19 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(found_credentials.user_name,test_credentials.user_name)
         self.assertEqual(found_credentials.password,test_credentials.password)
+
+    def test_credentials_exist(self):
+        '''
+        test to check if we can return a Boolean if we cannot find the credentials
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Gmail","Lalakirui","we56fng") # new contact
+        test_credentials.save_credentials()
+
+        credentials_exist = Credentials.credentials_exist("Gmail")
+
+        self.assertTrue(credentials_exist)
         
 if __name__ == "__main__":
     unittest.main()
