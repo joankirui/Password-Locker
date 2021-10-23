@@ -1,3 +1,4 @@
+import pyperclip
 class User:
     '''
     Class that generates new instances of user
@@ -71,4 +72,9 @@ class Credentials:
         method that returns the credentials list
         '''
         return cls.credentials_list
+
+    @classmethod
+    def copy_password(cls,account):
+        credentials_found = Credentials.find_by_account(account)
+        pyperclip.copy(credentials_found.password)
 
