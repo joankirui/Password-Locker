@@ -47,3 +47,9 @@ def check_existing_credentials(account):
     Function that checks if credentials exist with that account and return a Boolean
     '''
     return Credentials.credentials_exist(account)
+def generate_Password():
+    '''
+    generates a random password for the user.
+    '''
+    auto_password=Credentials.generatePassword()
+    return auto_password
