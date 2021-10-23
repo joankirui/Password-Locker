@@ -30,6 +30,7 @@ def create_credentials(account,user_name,password):
     '''
     new_credentials = Credentials(account,user_name,password)
     return new_credentials
+
 def save_credentials(credentials):
     '''
     Function to save credentials
@@ -121,9 +122,10 @@ def main():
                     break
                 else:
                     print("Invalid password choice")
+                    
             save_credentials(create_credentials(account,user_name,password))
             print('\n')
-            print(f"Account Credeential for: {account} -UserName: {user_name} - Password:{password} created succesfully")
+            print(f"Account Credential for: {account} -UserName: {user_name} - Password:{password} created succesfully")
             print('\n')
         elif short_code == 'dc':
             if display_credentials():
@@ -155,7 +157,7 @@ def main():
             if find_credentials(search_name):
                 search_credential = find_credentials(search_name)
                 print("_"*50)
-                search_credential.del_credentials()
+                search_credential.delete_credentials()
                 print('\n')
                 print(f"Your stored credentials for : {search_credential.account} successfully deleted!!!")
                 print('\n')
