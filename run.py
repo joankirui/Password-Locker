@@ -32,3 +32,8 @@ def display_credentials():
     '''
     Function that returns all the saved credentials
     '''
+def del_credentials(credentials):
+    '''
+    Function to delete credentials
+    '''
+    credentials.delete_credentials()
