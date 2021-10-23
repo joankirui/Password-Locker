@@ -53,6 +53,20 @@ class TestCredentials(unittest.TestCase):
         '''
         self.new_credentials.save_credentials() # saving the new credentials
         self.assertEqual(len(Credentials.credentials_list),1)
+
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test has run
+        '''
+        Credentials.credentials_list = []
+    def test_save_multiple_credentials(self):
+        '''
+        test_save_multiple_credentials to check if we can save multiple credentials objects to our credentials_list
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Gmail","Lalakirui","we56fng")  #new Credentials
+        test_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credentials_list),2)
         
 if __name__ == "__main__":
     unittest.main()
