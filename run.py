@@ -68,7 +68,7 @@ def copy_password(account):
     '''
     return Credentials.copy_password(account)
 def main():
-    print("Hello welcome to your credentials store...\n Use these short codes:\n ca --create new account\n ha --have an existing account") 
+    print("Hello welcome to your credentials store...\n Use these short codes:\n CA --create new account\n HA --have an existing account") 
     short_code = input("").lower().strip()
 
     if short_code == 'ca':
@@ -102,7 +102,7 @@ def main():
             print(f"Hello {username}.Welcome to Credentials store")
             print('\n')
     while True:
-        print("Use these short codes:\n cc - Create a new credential \n dc - Display credentials\n fc - Find a credential\n gp - Generate a random password \n d - Delete a credential \n ex - Exit the application \n")
+        print("Use these short codes:\n CC - Create a new credential \n DC - Display credentials\n FC - Find a credential\n GP - Generate a random password \n D - Delete a credential \n EX - Exit the application \n")
         short_code = input().lower().strip()
         if short_code == "cc":
             print("Create New Credential")
