@@ -24,6 +24,11 @@ The user would like to.... :
     * $ chmod +x run.py
     * $ ./run.py
   * To run test for the application $ python3 passlock_test.py
+# Behaviour Driven Development
+ | Behaviour | Input | Output
+ |-----------|--------|-------|
+ |Open the application on the terminal| Run the command $ ./run.py | Hello welcome to your credentials store *ca-create new account *ha-have an account|
+
 # Technologies Used
   * python3.6
 # License
