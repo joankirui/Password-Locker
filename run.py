@@ -12,11 +12,20 @@ def save_user(user):
     Function to save a new user
     '''
     user.save_user()
-def display_user():
+@classmethod
+def display_user(cls):
     '''
     Function that returns all the saved users
     '''
-    return User.display_user()
+    return cls.display_user()
+
+
+def delete_user(self):
+    '''
+    delete_account method deletes a  saved account from the list
+    '''
+    User.user_list.remove(self)
+
 def login_user(username,password):
     '''
     function that checks whether a user exists and then login the user
