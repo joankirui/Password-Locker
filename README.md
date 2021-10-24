@@ -20,7 +20,7 @@ The user would like to.... :
   * cd Password-Locker
   * code . or atom . based on the text editor you have.
 # Running the Application
-  * To run the application, open the cloned file in terminal and run the following commands:
+  * To run the application, open the cloned file in terminal and run the following commands:\n
     $ chmod +x run.py
     $ ./run.py
   * To run test for the application $ python3 passlock_test.py
